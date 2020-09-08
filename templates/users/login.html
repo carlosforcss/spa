@@ -11,10 +11,23 @@
     <title>SPA | Login</title>
 </head>
 <body>
+
+    <div class="background-cover">
+        <img src="{% static 'assets/background-login.jpg' %}">
+    </div>
+
     <div class="Login">
         <div class="Login-title">Log in</div>
-        <form action="" class="Login-body">
-
+        <form action="" method="POST" class="Login-body">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="">{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {{ form.errors }}
+            {% endfor %}
+            <button type="submit">Log in!</button>
         </form>
     </div>
 </body>
