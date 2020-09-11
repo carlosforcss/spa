@@ -7,10 +7,12 @@ from django.shortcuts import get_object_or_404
 # - - -
 # Project
 from spa.users.models import User
+from spa.utils.widgets import TextWidget
+
 
 class LoginForm(forms.Form):
 
-    username = forms.CharField(max_length=16)
+    username = forms.CharField(max_length=16, widget=TextWidget(is_password=True))
     password = forms.CharField(widget=forms.PasswordInput)
 
     def clean(self):
