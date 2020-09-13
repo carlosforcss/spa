@@ -13,7 +13,7 @@ from spa.utils.widgets import TextWidget
 class LoginForm(forms.Form):
 
     username = forms.CharField(max_length=16, widget=TextWidget(is_password=True))
-    password = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(widget=TextWidget)
 
     def clean(self):
         data = super(LoginForm, self).clean()

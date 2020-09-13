@@ -32,4 +32,5 @@ class LoginView(View):
             user = form.get_user()
             login(request, user)
             return redirect(settings.LOGIN_REDIRECT_URL)
+        context["errors"] = form.errors.get("__all__", [])
         return render(request, self.template, context)
