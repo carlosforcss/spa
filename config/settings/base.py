@@ -26,9 +26,8 @@ MIDDLEWARE = [
 APPS_DIR = BASE_DIR / "spa"
 ROOT_URLCONF = 'config.urls'
 AUTH_USER_MODEL = 'users.User'
-
-LOGIN_URL = "/"
-LOGIN_REDIRECT_URL = "/admin/"
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
 
 TEMPLATES = [
     {

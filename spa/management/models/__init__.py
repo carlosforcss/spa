@@ -1,0 +1,1 @@
+from .spas import Spa
