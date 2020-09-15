@@ -20,7 +20,25 @@
                         <div class="ui-table-header-item">Address</div>
                     </div>
                     <div class="ui-table-body">
-                        pass
+                        {% for spa in object_list %}
+                            <div class="ui-table-row">
+                                <div class="ui-table-cell">
+                                    1
+                                </div>
+                                <div class="ui-table-cell">
+                                    Default
+                                </div>
+                                <div class="ui-table-cell">
+                                    Pedro Bracamontes 8218
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="ui-table-row">
+                                <div class="ui-table-cell">
+                                    Doesn't exist elements.
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
