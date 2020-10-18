@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 # Django
 from django.db import models
-# Python & Thirth Parties
+# Python & Third Parties
 # - - -
 # Project
 from spa.utils.models import CommonModel

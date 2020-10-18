@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.conf import settings
 from django.contrib.auth import login
-# Python & Thirth Parties
+# Python & Third Parties
 # - - -
 # Project
 from spa.users.forms import LoginForm

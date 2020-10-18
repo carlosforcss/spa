@@ -61,12 +61,17 @@
     font-size: 22px;
 }
 
+.ui-content-body {
+    margin: 30px 5%;
+}
+
 .ui-table{
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 10px 5%;
 }
+
 .ui-table-header{
     display: flex;
     flex-direction: row;

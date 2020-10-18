@@ -2,7 +2,7 @@
 # Django
 from django.contrib.auth.models import AbstractBaseUser, UserManager
 from django.db import models
-# Python & Thirth Parties
+# Python & Third Parties
 # - - -
 # Spa
 from spa.utils.models import CommonModel

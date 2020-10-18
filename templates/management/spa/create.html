@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="ui-content-title">
+        <span class="icon">
+            <div class="material-icons">
+                <i class="material-icons">add</i>
+            </div>
+        </span>
+        <span>Create Spa</span>
+    </div>
+
+    <form class="ui-content-body" action="" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            {% for field in form %}
+                <div class="col s6">
+                    {{ field.label }}
+                    {{ field }}
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.errors }}
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <butt~on type="submit" class="btn right"><i class="material-icons left">add</i>Create</button>
+                <a href="" class="btn darken-4 right m4"><i class="material-icons left">cancel</i>Cancel</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

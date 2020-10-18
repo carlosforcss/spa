@@ -3,7 +3,7 @@
 from django import forms
 from django.contrib.auth import authenticate
 from django.shortcuts import get_object_or_404
-# Python & Thirth Parties
+# Python & Thirtd Parties
 # - - -
 # Project
 from spa.users.models import User

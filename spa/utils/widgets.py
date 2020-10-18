@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.forms.widgets import Widget
 from django.template import loader
 from django.utils.safestring import mark_safe
-# Python & Thirth Parties
+# Python & Third Parties
 from abc import abstractmethod
 
 

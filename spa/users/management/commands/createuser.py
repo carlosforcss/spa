@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Django
 from django.core.management.base import BaseCommand
-# Thirth Parties & Python
+# Third Parties & Python
 # - - -
 # Project
 from spa.users.models import User

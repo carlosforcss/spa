@@ -12,6 +12,14 @@
     </div>
     <div class="ui-content-body">
         <div class="row">
+            <div class="col s11 ms-4">
+                <a href="{% url 'management:spa_create' %}" class="btn btn-primary right">
+                    Crear
+                </a>
+            </div>
+
+        </div>
+        <div class="row">
             <div class="col s12">
                 <div class="ui-table">
                     <div class="ui-table-header">
@@ -26,10 +34,10 @@
                                     1
                                 </div>
                                 <div class="ui-table-cell">
-                                    Default
+                                    {{ spa.name }}
                                 </div>
                                 <div class="ui-table-cell">
-                                    Pedro Bracamontes 8218
+                                    {{ spa.address }}
                                 </div>
                             </div>
                         {% empty %}
