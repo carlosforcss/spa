@@ -5,9 +5,11 @@ from django.views import View
 from django.conf import settings
 from django.contrib.auth import login
 # Python & Third Parties
-# - - -
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 # Project
 from spa.users.forms import LoginForm
+from spa.users.serializers import SingUpSerializer
 
 
 class LoginView(View):
@@ -34,3 +36,11 @@ class LoginView(View):
             return redirect(settings.LOGIN_REDIRECT_URL)
         context["errors"] = form.errors.get("__all__", [])
         return render(request, self.template, context)
+
+
+@api_view(["POST"])
+def sing_up(request):
+    serializer = SingUpSerializer(data=request.POST)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save()
+        return Response(serializer.data)

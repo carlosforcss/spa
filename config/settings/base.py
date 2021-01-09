@@ -2,16 +2,27 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+THIRD_PARTIES = [
+    "rest_framework",
+    "rest_framework.authtoken",
+    "test_without_migrations"
+]
+
+PROJECT_APPS = [
     "spa.users.app.UsersAppConfig",
     "spa.management.app.ManagementAppConfig",
 ]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTIES + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +74,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
